@@ -2,7 +2,7 @@
 Minecraft Query&Rcon Api
 
 ## BUILD
-- origin : mvn clean package
+- master : mvn clean package
 - native : mvn clean -Pnative-image package
 
 # 소스 출처
