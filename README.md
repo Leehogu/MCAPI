@@ -2,7 +2,7 @@
 Minecraft Query&Rcon Api
 
 ## BUILD
-- origin : mvn clean package
+- master : mvn clean package
 - native : mvn clean -Pnative-image package
 
 # 소스 출처
@@ -12,7 +12,7 @@ Minecraft Query&Rcon Api
 
 # 사용법
 
-서버와 다른 곳에서 실행시 application.yml mc.address에 서버 주소 입력 후 실행.
+마인크래프트 서버와 다른 곳에서 실행시 application.yml mc.address에 서버 주소 입력 후 실행.
 
 rcon이나 query port가 기본값이 아닐시에도 yml 변경.
 
@@ -32,7 +32,7 @@ query basicstat 확인
 ## /rcon
 원격 명령어 실행
 
-### 파라미터
+### query parameter
 
 password : rcon 비밀번호
 

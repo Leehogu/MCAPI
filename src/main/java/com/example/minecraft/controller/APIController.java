@@ -29,7 +29,7 @@ public class APIController {
     @GetMapping("fullstat")
     public Object fullstat() {
         try {
-            return new MCQuery(address, queryPort).fullStat();
+            return new MCQuery(address, queryPort).fullStat().asJSON();
         } catch(Exception e) {
             return e.getMessage();
         }
@@ -39,7 +39,7 @@ public class APIController {
     @GetMapping("basicstat")
     public Object basicstat() {
         try {
-            return new MCQuery(address, queryPort).basicStat();
+            return new MCQuery(address, queryPort).basicStat().asJSON();
         } catch(Exception e) {
             return e.getMessage();
         }

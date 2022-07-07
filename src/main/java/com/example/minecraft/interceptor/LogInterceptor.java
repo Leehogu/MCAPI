@@ -23,17 +23,17 @@ public class LogInterceptor implements HandlerInterceptor {
         String ip = request.getRemoteAddr();
         String req = request.getRequestURI().substring(1);
         String originQuery = request.getQueryString();
-        String query = "";
+        StringBuilder query = new StringBuilder();
         if(originQuery != null) {
             String[] querys = originQuery.split("&");
             for(String s : querys) {
                 if(s.contains("password")) {
                     s="password=********";
                 }
-                query+=s;
-                query+="&";
+                query.append(s);
+                query.append("&");
             }
-            query = query.substring(0, query.length()-1);
+            query = new StringBuilder(query.substring(0, query.length() - 1));
         }
         if(!req.equals("metrics")) {
             log.info("IP : " + ip + " / REQ : " + req + " / Query : " + query);

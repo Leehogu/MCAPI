@@ -148,13 +148,7 @@ public class MCQuery
 		 */
 		return 1;
 	}
-	
-	@Override
-	public void finalize()
-	{
-		socket.close();
-	}
-	
+
 	//debug
 	static void printBytes(byte[] arr)
 	{

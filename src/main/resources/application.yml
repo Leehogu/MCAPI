@@ -2,6 +2,7 @@ spring:
   application:
     name: mcapi
 
+
   jackson:
     default-property-inclusion: non_null
 
