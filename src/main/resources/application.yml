@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: mcapi
+
+  jackson:
+    default-property-inclusion: non_null
+
+server:
+  port: 25585
+  tomcat:
+    accesslog:
+      file-date-format: yyyy-MM-dd
+      prefix: access-log-
+      suffix: .log
+      pattern: '%{yyyy-MM-dd HH:mm:ss.SSS}t|%h|%u|%m %U|%{Authorization}i|%{Referer}i|%{User-Agent}i|%B|%s|%D'
+      enabled: true
+      max-days: 7
+      directory: log
+    basedir: ./
+
+logging:
+  dir: ./log
+  level:
+    root: info
+
+mc:
+  address: localhost
+  query_port: 25565
+  rcon_port: 25575
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "prometheus"
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
+
+
