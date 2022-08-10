@@ -25,7 +25,7 @@ logging:
     root: info
 
 mc:
-  address: localhost
+  address: host.docker.internal
   query_port: 25565
   rcon_port: 25575
 
@@ -37,6 +37,3 @@ management:
   metrics:
     tags:
       application: ${spring.application.name}
-
-
-
