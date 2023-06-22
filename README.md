@@ -3,7 +3,7 @@ Minecraft Query&Rcon Api
 
 ## BUILD
 - master : mvn clean package
-- native : mvn clean -Pnative-image package
+- native : mvn clean -Pnative native:compile-no-fork
 
 # 소스 출처
 - Query : https://github.com/rmmccann/Minecraft-Status-Query
